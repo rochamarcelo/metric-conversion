@@ -44,5 +44,12 @@ jobs:
     - name: Run Psalm
       run: composer psalm
 
+  test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
     - name: Run PHPUnit tests
       run: composer test
