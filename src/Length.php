@@ -7,7 +7,7 @@ namespace RochaMarcelo\MetricsConversion;
 class Length
 {
     public const CENTIMETER = 'cm';
-    public const FEET = 'ft';
+    public const FOOT = 'ft';
     public const INCH = 'in';
     public const KILOMETER = 'km';
     public const METER = 'm';
@@ -20,7 +20,7 @@ class Length
      */
     public const LIST = [
         self::CENTIMETER,
-        self::FEET,
+        self::FOOT,
         self::INCH,
         self::KILOMETER,
         self::METER,
@@ -65,7 +65,7 @@ class Length
      */
     public function toFeet(): float
     {
-        return LengthTable::convert($this->value, $this->unit, self::FEET);
+        return LengthTable::convert($this->value, $this->unit, self::FOOT);
     }
 
     /**

@@ -28,7 +28,7 @@ class LengthTest extends TestCase
     {
         $length = new Length(15345.345323, Length::CENTIMETER);
         $this->assertEquals(503.4562113845144, $length->toFeet());
-        $feet = new Length(503.4562113845144, Length::FEET);
+        $feet = new Length(503.4562113845144, Length::FOOT);
         $this->assertEquals(6041.474536614173, $length->toInches());
         $this->assertEquals(6041.474536614173, $feet->toInches());
         $inches = new Length(6041.474536614173, Length::INCH);
@@ -57,7 +57,7 @@ class LengthTest extends TestCase
     public function testTo()
     {
         $length = new Length(15345.345323, Length::CENTIMETER);
-        $this->assertEquals(503.4562113845144, $length->to(Length::FEET));
+        $this->assertEquals(503.4562113845144, $length->to(Length::FOOT));
         $this->assertEquals(153.45345323, $length->to(Length::METER));
     }
 

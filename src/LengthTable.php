@@ -15,8 +15,8 @@ class LengthTable
             Length::MILLIMETER => 25.4,
             Length::CENTIMETER => 2.54,
         ],
-        Length::FEET => [
-            Length::FEET => 1.0,
+        Length::FOOT => [
+            Length::FOOT => 1.0,
             Length::INCH => 12.0,
             Length::MILLIMETER => 304.8,
             Length::CENTIMETER => 30.48,
@@ -25,7 +25,7 @@ class LengthTable
         Length::YARD => [
             Length::YARD => 1.0,
             Length::INCH => 36.0,
-            Length::FEET => 3.0,
+            Length::FOOT => 3.0,
             Length::MILLIMETER => 914.4,
             Length::CENTIMETER => 91.44,
             Length::METER => 0.9144,
@@ -33,7 +33,7 @@ class LengthTable
         ],
         Length::MILE => [
             Length::INCH => 63360.0,
-            Length::FEET => 5280.0,
+            Length::FOOT => 5280.0,
             Length::YARD => 1760.0,
             Length::MILE => 1.0,
             Length::MILLIMETER => 1609344.0,
@@ -49,14 +49,14 @@ class LengthTable
             Length::CENTIMETER => 1.0,
         ],
         Length::METER => [
-            Length::FEET => 3.280839895,
+            Length::FOOT => 3.280839895,
             Length::MILLIMETER => 1000.0,
             Length::CENTIMETER => 100.0,
             Length::METER => 1.0,
         ],
         Length::KILOMETER => [
             Length::INCH => 39370.1,
-            Length::FEET => 3280.84,
+            Length::FOOT => 3280.84,
             Length::MILLIMETER => 1000000,
             Length::CENTIMETER => 100000,
             Length::METER => 1000,
@@ -69,13 +69,13 @@ class LengthTable
      */
     protected static array $divisors = [
         Length::INCH => [
-            Length::FEET => 12.0,
+            Length::FOOT => 12.0,
             Length::YARD => 36.0,
             Length::MILE => 63360.0,
             Length::METER => 39.37,
             Length::KILOMETER => 39370.0,
         ],
-        Length::FEET => [
+        Length::FOOT => [
             Length::YARD => 3.0,
             Length::MILE => 5280.0,
             Length::KILOMETER => 3280.84,
@@ -85,7 +85,7 @@ class LengthTable
         ],
         Length::MILLIMETER => [
             Length::INCH => 25.4,
-            Length::FEET => 304.8,
+            Length::FOOT => 304.8,
             Length::YARD => 914.4,
             Length::MILE => 1609344.0,
             Length::CENTIMETER => 10.0,
@@ -94,7 +94,7 @@ class LengthTable
         ],
         Length::CENTIMETER => [
             Length::INCH => 2.54,
-            Length::FEET => 30.48,
+            Length::FOOT => 30.48,
             Length::YARD => 91.44,
             Length::MILE => 160934.4,
             Length::METER => 100.0,
