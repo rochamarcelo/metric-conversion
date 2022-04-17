@@ -26,14 +26,18 @@
     "require-dev": {
         "phpstan/phpstan": "^1.5",
         "phpunit/phpunit": "*",
+        "squizlabs/php_codesniffer": "^3.6",
         "vimeo/psalm": "^4.22"
     },
     "scripts": {
         "check": [
+            "@cs-check",
             "@test",
             "@stan",
             "@psalm"
         ],
+        "cs-check": "phpcs -n -p --standard=PSR12 ./src ./tests",
+        "cs-fix": "phpcbf --standard=PSR12 ./src ./tests",
         "test": "phpunit --stderr",
         "stan": "phpstan analyse src/",
         "psalm": "psalm",
