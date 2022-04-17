@@ -25,16 +25,18 @@
     },
     "require-dev": {
         "phpstan/phpstan": "^1.5",
-        "phpunit/phpunit": "*"
+        "phpunit/phpunit": "*",
+        "vimeo/psalm": "^4.22"
     },
     "scripts": {
-
         "check": [
             "@test",
-            "@analyse"
+            "@stan",
+            "@psalm"
         ],
         "test": "phpunit --stderr",
         "stan": "phpstan analyse src/",
+        "psalm": "psalm",
         "coverage-test": "phpunit --stderr --coverage-clover=clover.xml"
     }
 }
