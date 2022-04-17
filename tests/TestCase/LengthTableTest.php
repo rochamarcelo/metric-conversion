@@ -32,6 +32,32 @@ class LengthTableTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
+     * Test convert method with invalid base unit.
+     *
+     * @covers ::convert
+     * @return void
+     */
+    public function testConvertInvalidBaseUnit()
+    {
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage('Can\'t convert value from "kg" to "m"');
+        LengthTable::convert(100, 'kg', Length::METER);
+    }
+
+    /**
+     * Test convert method with invalid target unit.
+     *
+     * @covers ::convert
+     * @return void
+     */
+    public function testConvertInvalidTargetUnit()
+    {
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage('Can\'t convert value from "yd" to "g"');
+        LengthTable::convert(100, Length::YARD, 'g');
+    }
+
+    /**
      * @return array
      */
     public function dataProviderConvert(): array
