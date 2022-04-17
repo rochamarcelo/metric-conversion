@@ -115,4 +115,13 @@ class Length
     {
         return LengthTable::convert($this->value, $this->unit, self::YARD);
     }
+
+    /**
+     * @param string $unitTo The unit to convert to, see LengthTable::convert
+     * @return float
+     */
+    public function to(string $unitTo): float
+    {
+        return LengthTable::convert($this->value, $this->unit, $unitTo);
+    }
 }

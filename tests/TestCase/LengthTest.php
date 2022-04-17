@@ -51,6 +51,17 @@ class LengthTest extends TestCase
     }
 
     /**
+     * @covers ::to
+     * @return void
+     */
+    public function testTo()
+    {
+        $length = new Length(15345.345323, Length::CENTIMETER);
+        $this->assertEquals(503.4562113845144, $length->to(Length::FEET));
+        $this->assertEquals(153.45345323, $length->to(Length::METER));
+    }
+
+    /**
      * @covers ::__construct
      * @return void
      */
