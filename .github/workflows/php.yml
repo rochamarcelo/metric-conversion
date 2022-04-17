@@ -43,7 +43,7 @@ jobs:
     # Docs: https://getcomposer.org/doc/articles/scripts.md
 
     - name: Run Code Sniffer
-      run: vendor/bin/phpcs --report=checkstyle src/ tests/ | cs2pr
+      run: vendor/bin/phpcs --report=checkstyle --standard=PSR12 ./src ./tests | cs2pr
       
     - name: Run psalm
       if: success() || failure()
