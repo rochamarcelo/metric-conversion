@@ -8,7 +8,7 @@ use RochaMarcelo\MetricsConversion\Length;
 use RochaMarcelo\MetricsConversion\LengthTable;
 
 /**
- *
+ * @coversDefaultClass \RochaMarcelo\MetricsConversion\LengthTable
  */
 class LengthTableTest extends \PHPUnit\Framework\TestCase
 {
@@ -21,6 +21,7 @@ class LengthTableTest extends \PHPUnit\Framework\TestCase
      * @param float $expectedResult The expected result.
      *
      * @dataProvider dataProviderConvert
+     * @covers ::convert
      * @return void
      */
     public function testConvert($value, string $measureFrom, string $measureTo, float $expectedResult)
