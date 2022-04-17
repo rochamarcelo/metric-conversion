@@ -1,0 +1,29 @@
+{
+    "name": "rochamarcelo/metrics-conversion",
+    "description": "A library to handle metric conversion (length, mass and temperature)",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "RochaMarcelo\\MetricsConversion\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "RochaMarcelo\\MetricsConversion\\Test\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Marcelo Rocha",
+            "email": "marcelo@omarcelo.com.br"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.4.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    }
+}
