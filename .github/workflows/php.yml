@@ -16,6 +16,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '7.4'
+        tools: cs2pr
+        coverage: pcov
 
     - name: Validate composer.json and composer.lock
       run: composer validate --strict
@@ -36,7 +43,7 @@ jobs:
     # Docs: https://getcomposer.org/doc/articles/scripts.md
 
     - name: Run Code Sniffer
-      run: composer cs-check
+      run: vendor/bin/phpcs --report=checkstyle src/ tests/ | cs2pr
       
     - name: Run psalm
       if: success() || failure()
@@ -52,4 +59,4 @@ jobs:
 
     - name: Run PHPUnit tests
       if: success() || failure()
-      run: composer test
+      run: vendor/bin/phpunit --verbose --coverage-clover=coverage.xml
