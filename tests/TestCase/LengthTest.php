@@ -13,6 +13,7 @@ use RochaMarcelo\MetricsConversion\Length;
 class LengthTest extends TestCase
 {
     /**
+     * @covers ::__construct
      * @covers ::toInches
      * @covers ::toFeet
      * @covers ::toKilometers
@@ -21,6 +22,7 @@ class LengthTest extends TestCase
      * @covers ::toMillimeters
      * @covers ::toYards
      * @covers ::toCentimeters
+     * @covers \RochaMarcelo\MetricsConversion\LengthTable::convert
      *
      * @return void
      */
@@ -52,6 +54,9 @@ class LengthTest extends TestCase
 
     /**
      * @covers ::to
+     * @covers ::__construct
+     * @covers \RochaMarcelo\MetricsConversion\LengthTable::convert
+     *
      * @return void
      */
     public function testTo()
